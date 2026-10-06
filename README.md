@@ -1,124 +1,114 @@
-# Task List - Gerenciador de Tarefas
+# Task List Manager
 
-Um simples gerenciador de tarefas em linha de comando desenvolvido em Python.
+A simple command-line task manager developed in Python.
 
-## 📋 Funcionalidades
+## 📋 Features
 
-- Adicionar novas tarefas
-- Visualizar lista de tarefas
-- Atualizar nome das tarefas
-- Marcar tarefas como concluídas
-- Remover tarefas concluídas
-- Interface interativa via terminal
+- Add new tasks
+- View task list
+- Update task names
+- Mark tasks as completed
+- Remove completed tasks
+- Interactive terminal interface
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **Python 3.x** - Linguagem de programação principal
-- **Bibliotecas padrão do Python** - Não requer dependências externas
+- **Python 3.x** - Primary programming language
+- **Python Standard Libraries** - No external dependencies required
 
-## 🏗️ Padrões de Projeto
+## 🏗️ Design Patterns
 
-- **Static Methods** - Implementação de métodos estáticos na classe `Task`
-- **Estrutura Modular** - Separação de responsabilidades entre `main.py` e `src/task.py`
-- **Type Hints** - Tipagem explícita para melhor legibilidade do código
+- **Static Methods** - Implementation of static methods in the `Task` class
+- **Modular Structure** - Separation of concerns between `main.py` and `src/task.py`
+- **Type Hints** - Explicit typing for improved code readability
 
-## ⚙️ Setup e Configuração
+## ⚙️ Setup and Configuration
 
-### Pré-requisitos
+### Prerequisites
 
-- Python 3.8+ instalado no sistema
+- Python 3.8+ installed on the system
 
-### Instalação e Execução
+### Installation and Execution
 
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 cd task-list
 ```
 
-2. Execute o programa:
+2. Run the program:
 
 ```bash
 python main.py
 ```
 
-## 📁 Estrutura do Projeto
+## 📝 Usage Example
 
 ```
-task-list/
-├── main.py          # Arquivo principal com menu e lógica de interação
-├── src/
-│   └── task.py      # Classe Task com métodos de gerenciamento
-└── README.md        # Documentação do projeto
+Task Manager Menu
+
+1 - Add Task
+2 - View Tasks
+3 - Update Task
+4 - Complete Task
+5 - Delete completed tasks
+6 - Exit
+
+Enter the desired option: 1
+Enter the task name: Study Python
+'Study Python' task added successfully!
 ```
 
-## 📝 Exemplo de Uso
+## 🚧 Next Steps
 
-```
-Menu do Gerenciador de Tarefas
+### Web Interface Implementation with Flask
 
-1 - Adicionar Tarefa
-2 - Ver Tarefas
-3 - Atualizar Tarefa
-4 - Completar Tarefa
-5 - Deletar tarefas concluídas
-6 - Sair
+The project's next objective is to migrate from the command line interface to a modern web application:
 
-Digite a opção desejada: 1
-Digite o nome da tarefa: Estudar Python
-Tarefa 'Estudar Python' adicionada com sucesso!
-```
+#### Planned Technologies
 
-## 🚧 Próximos Passos
+- **Flask** - Web framework for Python
+- **HTML/CSS/JavaScript** - Application frontend
+- **Bootstrap** - CSS Framework for responsive interface
+- **SQLite** - Database for task persistence
 
-### Implementação de Interface Web com Flask
+#### Planned Web Features
 
-O projeto tem como próximo objetivo migrar da interface de linha de comando para uma aplicação web moderna:
+- Intuitive and responsive web interface
+- Data persistence in database
+- REST API for CRUD operations
+- Deploy on hosting platform (Heroku, Vercel, etc.)
 
-#### Tecnologias Planejadas
-
-- **Flask** - Framework web para Python
-- **HTML/CSS/JavaScript** - Frontend da aplicação
-- **Bootstrap** - Framework CSS para interface responsiva
-- **SQLite** - Banco de dados para persistência das tarefas
-
-#### Funcionalidades Web Planejadas
-
-- Interface web intuitiva e responsiva
-- Persistência de dados em banco de dados
-- API REST para operações CRUD
-- Deploy em plataforma de hospedagem (Heroku, Vercel, etc.)
-
-#### Estrutura Futura do Projeto
+#### Future Project Structure
 
 ```
 task-list-web/
-├── app.py              # Aplicação Flask principal
+├── app.py # Main Flask application
 ├── models/
-│   └── task_model.py   # Modelo de dados da tarefa
+│ └── task_model.py # Task data model
 ├── routes/
-│   └── task_routes.py  # Rotas da API REST
-├── templates/
-│   ├── base.html       # Template base
-│   └── index.html      # Página principal
+│ └── task_routes.py # REST API routes
+├──templates/
+│ ├── base.html # Template base
+│ └── index.html # Main page
 ├── static/
-│   ├── css/
-│   ├── js/
-│   └── img/
-├── requirements.txt    # Dependências do projeto
+│ ├── css/
+│ ├── js/
+│ └── img/
+├── requirements.txt # Project dependencies
 └── README.md
 ```
 
-#### Comandos de Setup Futuros
+#### Future Setup Commands
 
 ```bash
-# Instalar dependências
+# Install dependencies
 pip install -r requirements.txt
 
-# Executar aplicação Flask
+# Run Flask application
 python app.py
 
-# Acesso via navegador
+# Access via browser
 http://localhost:5000
 ```
