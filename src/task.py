@@ -3,7 +3,7 @@ class Task:
     def add_task(task_name: str, task_list: list):
         task_list.append({"task_name": task_name, "completed": False, "id": len(task_list)})
         
-        print(f"Tarefa '{task_name}' adicionada com sucesso!")
+        print(f"Task '{task_name}' successfully added!")
 
         
     @staticmethod
@@ -19,7 +19,7 @@ class Task:
         last_name = task_list[index]['task_name']
         
         task_list[index]['task_name'] = new_name
-        print(f"Tarefa Renomeada de '{last_name}' para '{new_name}'")
+        print(f"Task renamed from '{last_name}' to '{new_name}'")
 
 
     @staticmethod
@@ -27,7 +27,7 @@ class Task:
         index = task_id - 1
         task_list[index]['completed'] = True
         
-        print('Tarefa completada com sucesso!')
+        print('Task successfully completed!')
         Task.show_tasks(task_list)
 
 
@@ -36,6 +36,6 @@ class Task:
         for task in task_list:
             if task['completed']:
                 task_list.remove(task)
-        print('Tarefas concluidas removidas com sucesso!')
+        print('Completed tasks successfully removed!')
             
 task = Task()
